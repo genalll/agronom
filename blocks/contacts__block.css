@@ -1,4 +1,8 @@
 .contacts__block{
+   max-width: 1920px;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    
 }
