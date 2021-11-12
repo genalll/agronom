@@ -1,0 +1,33 @@
+.page{
+    font-family: Roboto, sans-serif;
+    max-width: 100%;
+    background: green;
+}
+a:hover{
+    opacity: .7;
+    transition: 1s;
+}
+.region{
+text-align: left;
+color:white;
+font-size: 38px;
+}
+.distrikt{
+    display: block;
+    font-size: 28px;
+    width: 250px;
+    border-radius: 10px;
+
+}
+
+.distrikt:hover{
+    background-color:#FFBB01;
+}
+.distriktred{
+    background-color:#FFBB01;
+}
+.result{
+ font-size: 42px;
+ text-align: center;
+ color: white;
+}

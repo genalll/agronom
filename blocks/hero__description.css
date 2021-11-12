@@ -1,0 +1,10 @@
+.hero__description{
+    margin: 0;
+    margin-top: 20px;
+    max-width: 420px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
+}

@@ -1,0 +1,43 @@
+@import url("../font/roboto/roboto.css");
+@import url("../blocks/page.css");
+@import url("../blocks/header.css");
+@import url("../blocks/header__logo.css");
+@import url("../blocks/lincks.css");
+@import url("../blocks/lincks__linck.css");
+@import url("../blocks/hero.css");
+@import url("../blocks/hero__job.css");
+@import url("../blocks/hero__name.css");
+@import url("../blocks/hero__description.css");
+@import url("../blocks/hero__text-contener.css");
+@import url("../blocks/hero-button.css");
+@import url("../blocks/section-title.css");
+@import url("../blocks/features.css");
+@import url("../blocks/features__blocks.css");
+@import url("../blocks/features__block.css");
+@import url("../blocks/features__image.css");
+@import url("../blocks/features__offer.css");
+@import url("../blocks/features__offer-text.css");
+@import url("../blocks/contacts.css");
+@import url("../blocks/contacts__block.css");
+@import url("../blocks/contacts__form.css");
+@import url("../blocks/contacts__formtext.css");
+@import url("../blocks/contacts__input.css");
+@import url("../blocks/hero-button_contacts.css");
+@import url("../blocks/contacts__input_phone.css");
+@import url("../blocks/contacts__text.css");
+@import url("../blocks/contacts__type.css");
+@import url("../blocks/contacts__dates.css");
+@import url("../blocks/contacts__data.css");
+@import url("../blocks/contacts__value.css");
+@import url("../blocks/contacts__socials.css");
+@import url("../blocks/contacts__social.css");
+@import url("../blocks/contacts__social-link.css");
+@import url("../blocks/contacts__confidential.css");
+@import url("../blocks/contacts__type_socials.css");
+@import url("../blocks/lincks_footer.css");
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+.hero{
+   margin:0 auto;
+   margin-top: 124px;
+   margin-bottom:66px;
+   max-width: 936px;
+   display: flex;
+}

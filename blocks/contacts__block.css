@@ -1,0 +1,4 @@
+.contacts__block{
+    display: flex;
+    justify-content: flex-start;
+}

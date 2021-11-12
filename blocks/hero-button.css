@@ -1,0 +1,19 @@
+.hero-button{
+    margin-top: 38px;
+    width: 285px;
+    height: 65.17px;
+    background: #FFBB01;
+    box-shadow: 0px 4px 0px #B68500;
+    border-radius: 5px 5px 10px 10px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1B2944;
+    text-decoration-line: none;
+}

@@ -1,0 +1,9 @@
+.features__blocks{
+    margin:0 auto;
+    padding-bottom:85px;
+    padding-top:85px;
+    max-width: 936px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
