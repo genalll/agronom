@@ -161,6 +161,7 @@
                                 <!--                </select>-->
                                 <br>
                                 <input id="buttonSubmitCalculation" class="btn btn-primary" type="button" value="Рассчитать">
+                                <input id="reset" class="btn btn-primary" type="button" value="сброс">
                                 <hr>
                                 <br></br>
 
@@ -287,6 +288,7 @@
 
     <script language="JavaScript" type="text/javascript">
         const rangeKapital = document.getElementById("startKapitalist");
+        const reset = document.getElementById("reset");
         const patatoes = document.getElementById("square");
         const buttonSubmitCalculation = document.getElementById("buttonSubmitCalculation");
         const resultValue = document.getElementById("resultValue");
@@ -302,7 +304,9 @@
             resultValue.placeholder=document.getElementById("kapital").placeholder * patatoes.value;
         }
 
-
+        reset.onclick = function reset(event){
+            document.location.href = "calck.html";
+        }
        
 
 
