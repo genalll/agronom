@@ -1,4 +1,5 @@
-const buttonSelectRegion = document.querySelector(".hero-button");
+const buttonSelectRegion = document.querySelector("#seleckt");
+const buttonResetRegion = document.querySelector("#reset");
 const features = document.querySelector(".features");
 const region = document.querySelector(".region");
 const regionMap="";
@@ -22,8 +23,9 @@ distrikt4.classList.add("distrikt");
 function closeImagePopup(event) {
     console.log(event.target.id);
     if (event.target.shape=="poly") {
+        region.textContent='';
         region.textContent=event.target.id;
-
+  
         if (event.target.id=="Республика Марий Эл") {
             
             region.appendChild(distrikt1);
@@ -55,6 +57,12 @@ buttonSelectRegion.onclick = function readContent(event,regionMap){
     console.log("Я выбрал регион")
     features.textContent="";
     features.appendChild(result);
+
+}
+
+buttonResetRegion.onclick = function resetContent(event,regionMap){
+    console.log("Я сбросил регион")
+    document.location.href = "index.html";
 
 }
 
