@@ -1,3 +1,4 @@
+
 const buttonSelectRegion = document.querySelector("#seleckt");
 const buttonResetRegion = document.querySelector("#reset");
 const features = document.querySelector(".features");
@@ -20,12 +21,54 @@ distrikt3.classList.add("distrikt");
 distrikt4.classList.add("distrikt");
 
 
+
+
+class Card {
+    constructor(cardObj) {
+        this.name = cardObj.name;
+        
+            
+    }
+
+    cardCreate() {
+        const cardElement = document.createElement('article');
+        const cardName = document.createElement('h3');
+        
+
+
+
+        cardElement.classList.add("card");
+        
+        cardName.classList.add("card__name");
+      
+
+
+        cardName.textContent = this.name;
+        
+
+        
+        
+        cardElement.appendChild(cardName);
+    
+        this.cardElement = cardElement;
+        return this.cardElement;
+    }
+
+}
+
+
+
+
+
+
+
 function closeImagePopup(event) {
     console.log(event.target.id);
     if (event.target.shape=="poly") {
         region.textContent='';
         region.textContent=event.target.id;
-        result.textContent="Тут будут результаты вычеслений, бизнес планера"
+        
+        
         if (event.target.id != "Республика Марий Эл") {
             result.textContent="Для этого региона к сожалению не разработано критериев оценки эфективности сельского хозяйства"    
             
@@ -48,6 +91,8 @@ function closeImagePopup(event) {
 function selectRegion(event){
     if (event.target.classList.contains('distrikt')){
         event.target.classList.add("distriktred");
+        result.textContent=event.target.textContent
+        console.log(result.textContent+" На данный момент")
         this.removeEventListener('click', selectRegion);
 
     }
@@ -63,8 +108,12 @@ document.addEventListener('click', selectRegion);
 
 buttonSelectRegion.onclick = function readContent(event,regionMap){
     console.log("Я выбрал регион")
+    
+    const card =new Card({name:result.textContent});
+    const cards = card.cardCreate();
     features.textContent="";
-    features.appendChild(result);
+    console.log(cards);
+    features.appendChild(cards);
 
 }
 
