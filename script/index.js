@@ -20,12 +20,16 @@ distrikt2.classList.add("distrikt");
 distrikt3.classList.add("distrikt");
 distrikt4.classList.add("distrikt");
 
-
+sernursk={description:"температура воздуха от 5.1 до 25.3 градусов цельсия, почвы ,дерново-подзолистые, суглинистые, влажность 66-68, осадки 360-380, РН почвы 6,7"};
+yurirsk={description:"температура воздуха от 5.6 до 25.1 градусов цельсия,почвы дерново-слабо и средне-подзолистыми песчаными почвами, влажность 66-68, осадки 360-380, РН почвы 6,7"};
+yoskarla={description:"температура воздуха от 5.8 до 25.5 градусов цельсия,дерново-подзолистые, суглинистые, влажность 66-68, осадки 360-380, РН почвы 6,7"};
+voljskiy={description:"температура воздуха от 5 до 25.5 градусов цельсия, почвы дерново-подзолистые почвы, песчанные   влажность 66-68, осадки 360-380, РН почвы 6,7"};
 
 
 class Card {
     constructor(cardObj) {
         this.name = cardObj.name;
+        this.description = cardObj.description;
         
             
     }
@@ -33,6 +37,7 @@ class Card {
     cardCreate() {
         const cardElement = document.createElement('article');
         const cardName = document.createElement('h3');
+        const cardDescription = document.createElement('p');
         
 
 
@@ -44,11 +49,13 @@ class Card {
 
 
         cardName.textContent = this.name;
+        cardDescription.textContent = this.description;
         
 
         
         
         cardElement.appendChild(cardName);
+        cardElement.appendChild(cardDescription);
     
         this.cardElement = cardElement;
         return this.cardElement;
@@ -108,8 +115,20 @@ document.addEventListener('click', selectRegion);
 
 buttonSelectRegion.onclick = function readContent(event,regionMap){
     console.log("Я выбрал регион")
-    
-    const card =new Card({name:result.textContent});
+    let description=""
+    if (result.textContent=="Сернурский район"){
+         description =  sernursk.description;
+    }
+    if (result.textContent=="Йошкар-Ола"){
+        description =  yoskarla.description;
+   }
+   if (result.textContent=="Юринский район"){
+    description =  yurirsk.description;
+}
+if (result.textContent=="Волжский район"){
+    description =  voljskiy.description;
+}
+    const card =new Card({name:result.textContent,description:description});
     const cards = card.cardCreate();
     features.textContent="";
     console.log(cards);
