@@ -49,6 +49,8 @@ document.addEventListener('click', closeImagePopup);
 document.addEventListener('click', selectRegion);
 
 
+
+
 buttonSelectRegion.onclick = function readContent(event,regionMap){
     console.log("Я выбрал регион")
     features.textContent="";
