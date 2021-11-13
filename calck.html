@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor/normalize.css">
+    <link rel="stylesheet" href="style/index.css">
+
+<script type="text/javascript" src="script/jquery.min.js"></script>
+<script type="text/javascript" src="script/script.js"></script>
+<script type="text/javascript">$(function() {$('.map').maphilight();});</script>
+<script  src="script/tooltip.js"></script>
+
+
+<style type="text/css">#tooltip{background:white;border:1px solid white;color:#333333;font:menu;margin:10px;padding:3px 5px;position:absolute;visibility:hidden}</style>
+<style>
+    @media (min-width: 320px) and (max-width: 800px) {
+  .map{
+    display:none  !important;
+  }
+  .contacts__form{
+    display:none  !important;
+  }
+  .contacts__text{
+    display:none  !important;
+  }
+  }
+
+</style>
+
+
+    <title>Безнес агроном</title>
+</head>
+<body class="page">
+    <header class="header">
+        <a href="index.html" class="lincks__linck_white"><h2 class="lincks__linck ">БИЗНЕС АГРОНОМ</h2></a>
+        <nav>
+            <ul class="lincks">
+                <li class="lincks__linck"><a href="#"><img src="images/twitter.svg" alt="твиттер"></a></li>
+                <li class="lincks__linck"><a href="#"><img src="images/instagram.svg" alt="инстаграм"></a></li>
+                <li class="lincks__linck"><a href="#"><img src="images/facebook.svg" alt="фейсбук"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero__text-contener">
+                <span class="hero__job">Калькулятор доходности</span>
+                <h1 class="hero__name">Фермерского &nbsp;хозяйства</h1>
+            </div>
+        </section>
+        
+        <section class="features">
+            <h2 class="section-title">Сельское хозяфство это важно</h2>
+            <div class="features__blocks">
+            <article class="features__block">
+                <img class="features__image" src="images/offer-img.svg" alt="договор">
+                <h3 class="features__offer">Надежно</h3>
+                <p class="features__offer-text">Наши вычисления основаны на основании данных о состоянии почвы, местного климата, и особенностей агро культуры </p>
+            </article>
+            <article class="features__block">
+                <img class="features__image" src="images/deadline-img.svg" alt="дедлайн">
+                <h3 class="features__offer">Учтены риски</h3>
+                <p class="features__offer-text">Риски в процессе аграрного производства учтены</p>
+            </article>
+            <article class="features__block">
+                <img class="features__image" src="images/agreement-img.svg" alt="ценник">
+                <h3 class="features__offer">Любые объемы производства</h3>
+                <p class="features__offer-text">Инвестиции ограничены только вашими амбициями</p>
+            </article>
+            <article class="features__block">
+                <img class="features__image" src="images/steps-img.svg" alt="шаги">
+                <h3 class="features__offer">Премежуточные итоги</h3>
+                <p class="features__offer-text">Возможность спланировать этапы производства </p>
+            </article>
+            <article class="features__block">
+                <img class="features__image" src="images/conversation-img.svg" alt="поддержка">
+                <h3 class="features__offer">Информационная поддержка на всех этапах</h3>
+                <p class="features__offer-text">Научим вас или ваших сотрудников эффективно работать, запишем видео-инструкции.</p>
+            </article>
+            </div>
+        </section>
+        
+        
+        <section class="contacts">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <article class="contacts__block">
+            <form action="#" class="contacts__form">
+               <p class="contacts__formtext">Можете просто оставить заявку, мы перезвоним вам позже</p>
+               <input type="text" name="fio" placeholder="Ваше имя" class="contacts__input" id="fio">
+               <input type="text" name="phone" placeholder="Ваш телефон" class="contacts__input contacts__input_phone" id="phone">
+               <button class="hero-button hero-button_contacts" >бесплатная консультация</button>
+            </form>
+            <div class="contacts__text">
+                
+                <ul class="contacts__dates">
+                    <li class="contacts__data">
+                       <h3 class="contacts__type">Телефон</h3>
+                       <p class="contacts__value">+7 999 123 45 67</p>
+                    </li>
+                    <li class="contacts__data">
+                        <h3 class="contacts__type">Почта</h3>
+                        <p class="contacts__value">ivanov@mail.ru</p>
+                    </li>
+                </ul>
+                
+
+                <div class="contacts__socials">
+                    <h3 class="contacts__type contacts__type_socials">Соцсети</h3>
+                    <ul class="contacts__social">
+                        <li><a href="#" class="contacts__social-link">t.me/ivanov</a></li>
+                        <li><a href="#" class="contacts__social-link">vk.me/ivanov</a></li>
+                        <li><a href="#" class="contacts__social-link">fb.me/ivanov</a></li>
+                    </ul>
+                </div>
+
+
+                <ul class="lincks lincks_footer">
+                    <li class="lincks__linck"><a href="#"><img src="images/twitter.svg" alt="твиттер"></a></li>
+                    <li class="lincks__linck"><a href="#"><img src="images/instagram.svg" alt="инстаграм"></a></li>
+                    <li class="lincks__linck"><a href="#"><img src="images/facebook.svg" alt="фейсбук"></a></li>
+                </ul>
+
+
+                <a class="contacts__confidential" href="#">Политика конфиденциальности</a>
+
+
+            </div>
+            </article>
+        </section>
+    </main>
+
+</body>
+<script type="text/javascript" src="script/index.js"></script>
+</html>

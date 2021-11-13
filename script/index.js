@@ -51,6 +51,7 @@ class Card {
         cardName.classList.add("card__name");
         button.classList.add("hero-button");
         button.classList.add("hero-button_margin");
+        button.classList.add("hero-button_tocalk");
         button.textContent = "Перейти к глубокому анализу";
       
 
@@ -118,6 +119,7 @@ function selectRegion(event){
 
 document.addEventListener('click', closeImagePopup);
 document.addEventListener('click', selectRegion);
+document.addEventListener('click', goTocalk);
 
 
 
@@ -146,12 +148,23 @@ if (result.textContent=="Волжский район"){
     features.textContent="";
     console.log(cards);
     features.appendChild(cards);
-
+    
 }
 
 buttonResetRegion.onclick = function resetContent(event,regionMap){
     console.log("Я сбросил регион")
     document.location.href = "index.html";
-
+    
 }
 
+
+
+
+
+
+
+
+function goTocalk(event){
+    if (event.target.classList.contains('hero-button_tocalk')){
+    document.location.href = "calck.html";}
+}
