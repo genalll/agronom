@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="style/index.css">
+     
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <script language="JavaScript" type="text/javascript">
+
+        /*функция, отображающая результат на странице */
+        function changeResult(result){
+            document.getElementById('result').innerHTML = "Итого: " + result + " руб."
+        }
+        /*функция, проводящая непосредственно вычисления */ selectRayon
+        function calculateForm(){
+            var result = (document.getElementById('selectRayon').value * 1)
+            + (document.getElementById('startKapital').value * 1)
+            + (document.getElementById('square').value * 1)
+            + (document.getElementById('srok').value * 1)
+            + parseInt(document.getElementById('postanovka').checked?"500":"0")
+            + parseInt(document.getElementById('podgotovka').checked?"500":"0")
+            + parseInt(document.getElementById('registracia').checked?"1000":"0");
+            changeResult(result);
+            }
+        
+        
+        
+        
+            </script>
+
+
 
 <script type="text/javascript" src="script/jquery.min.js"></script>
 <script type="text/javascript" src="script/script.js"></script>
@@ -46,8 +74,117 @@
         <section class="hero">
             <div class="hero__text-contener">
                 <span class="hero__job">Калькулятор доходности</span>
-                <h1 class="hero__name">Фермерского &nbsp;хозяйства</h1>
+                <h1 class="hero__name hero__name-calck">Фермерского &nbsp;хозяйства</h1>
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="images/ml.png" alt="map" width="300px">
+                            <hr>
+                            <div class="col">
+                                <p class="alert alert-success" role="alert">Итоговый расчёт: <input type="text" id="result"> </p>
+                
+                                <hr>
+                                <p><strong class="font-italic">Дополнительные условия</strong></p>
+                                <div class="alert alert-primary" role="alert">
+                                    Необходимость теплиц
+                                </div>
+                                <div class="alert alert-primary" role="alert">
+                                    Коррекция режимов полива
+                                </div>
+                                <div class="alert alert-primary" role="alert">
+                                    Коррекция влажности воздуха
+                                </div>
+                                <div class="alert alert-primary" role="alert">
+                                    Коррекция почвенного профиля
+                                </div>
+                                <div class="alert alert-primary" role="alert">
+                                    Требуется химическая мелиорация
+                                </div>
+                <!--                <input type='checkbox' id="tempCorrection">Необходимость теплиц-->
+                <!--                <input type='checkbox' id="reqPoliv">Коррекция режимов полива-->
+                <!--                <input type='checkbox' id="reqVlazhnostVozduh">Коррекция влажности воздуха-->
+                <!--                <input type='checkbox' id="reqPochvaProfile">Коррекция почвенного профиля-->
+                <!--                <input type='checkbox' id="reqMelioration">Требуется химическая мелиорация-->
+                
+                            </div>
+                        </div>
+                
+                        <div class="col-8">
+                            <h2 class="font-weight-normal">Расчёт прибыльности</h2>
+                            <form name="calc" method="post">
+                                <p class="font-italic" >С помощью данного калькулятора Вы можете рассчитать прогноз прибыли возделывания
+                                    сельскохозяйственных культур в выбранном регионе.</p>
+                                <div class="dropdown">
+                                    <p class="font-italic" >Выбрать район</p>
+                                    <select name="selectRayon" id="selectRayon">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <option class="dropdown-item" value=1000>Йошкар-Ола</option>
+                                            <option class="dropdown-item" value=2000>Юринский р-н</option>
+                                            <option class="dropdown-item" value=3000>Сернурский р-н</option>
+                                            <option class="dropdown-item" value=4000>Волжский р-н</option>
+                                        </div>
+                                </div>
+                
+                                <label for="startKapital">Стартовый капитал</label>
+                                <input type="range" class="custom-range" min="0" max="5" id="startKapital">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Руб.</span>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                </div>
+                
+                                <p class="font-italic">Выберите требуемую культуру</p>
+                                <select name="kultura" id="kultura" class="selectKultura">
+                                    <!-- <option  disabled="disabled" selected="selected">-- Выберите --</option> -->
+                                    <option selected="selected" value=2000>Картофель</option>
+                                    <option value=2100>Капуста</option>
+                                    <option value=2300>Морковь</option>
+                                    <option value=2500>Свекла</option>
+                                    <option value=3000>Огурец</option>
+                                    <option value=3000>Дыня</option>
+                                    <option value=3000>Арбуз</option>
+                                    <option value=3000>Рис</option>
+                                </select>
+                <!--                <p>Выберите </p>-->
+                <!--                <select name="b" id="srok" class="selectArea">-->
+                <!--                    &lt;!&ndash; <option  disabled="disabled" selected="selected">&#45;&#45; Выберите &#45;&#45;</option> &ndash;&gt;-->
+                <!--                    <option selected="selected" value=0>30 дней</option>-->
+                <!--                    <option value=500>15 дней</option>-->
+                <!--                    <option value=1500>5 дней</option>-->
+                <!--                    <option value=2500>2 дня</option>-->
+                <!--                </select>-->
+                                <br>
+                                <input class="btn btn-primary" type="button" value="Рассчитать" onclick="calculateForm()">
+                                <hr>
+                                <br></br>
+                
+                <!--                <div id="result">Результат</div>-->
+                            </form>
+                
+                        </div>
+                
+                    </div>
+                </div>  
+
+
+
+
+
             </div>
+             
+
+
+            
+
+
+
+
+
+
+
         </section>
         
         <section class="features">
@@ -131,5 +268,13 @@
     </main>
 
 </body>
-<script type="text/javascript" src="script/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </html>

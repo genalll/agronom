@@ -33,3 +33,14 @@ font-size: 38px;
  max-width: 800px;
  margin: 0 auto;
 }
+
+.font-italic{
+    color: white;
+}
+.font-weight-normal{
+    color:white;
+}
+
+.btn-primary{
+    margin-top:20px;
+}
