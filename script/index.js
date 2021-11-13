@@ -25,17 +25,25 @@ function closeImagePopup(event) {
     if (event.target.shape=="poly") {
         region.textContent='';
         region.textContent=event.target.id;
-  
-        if (event.target.id=="Республика Марий Эл") {
+        result.textContent="Тут будут результаты вычеслений, бизнес планера"
+        if (event.target.id != "Республика Марий Эл") {
+            result.textContent="Для этого региона к сожалению не разработано критериев оценки эфективности сельского хозяйства"    
             
+        }
+
+
+        if (event.target.id=="Республика Марий Эл") {
             region.appendChild(distrikt1);
             region.appendChild(distrikt2);
             region.appendChild(distrikt3);
             region.appendChild(distrikt4);
         }
     }
+
     
 }
+    
+
 
 function selectRegion(event){
     if (event.target.classList.contains('distrikt')){

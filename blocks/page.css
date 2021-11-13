@@ -30,4 +30,6 @@ font-size: 38px;
  font-size: 42px;
  text-align: center;
  color: white;
+ max-width: 800px;
+ margin: 0 auto;
 }
