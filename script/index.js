@@ -40,6 +40,7 @@ class Card {
         const cardName = document.createElement('h3');
         const cardDescription = document.createElement('p');
         const cardeco = document.createElement('p');
+        const button = document.createElement('button');
         
 
 
@@ -48,6 +49,9 @@ class Card {
         cardElement.classList.add("features__offer-text_result");
         
         cardName.classList.add("card__name");
+        button.classList.add("hero-button");
+        button.classList.add("hero-button_margin");
+        button.textContent = "Перейти к глубокому анализу";
       
 
 
@@ -60,6 +64,7 @@ class Card {
         cardElement.appendChild(cardName);
         cardElement.appendChild(cardDescription);
         cardElement.appendChild(cardeco);
+        cardElement.appendChild(button);
     
         this.cardElement = cardElement;
         return this.cardElement;
