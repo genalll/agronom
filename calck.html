@@ -1,72 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="style/index.css">
-     
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    
-    
-    <script language="JavaScript" type="text/javascript">
 
-        /*функция, отображающая результат на странице */
-        function changeResult(result){
-            document.getElementById('result').innerHTML = "Итого: " + result + " руб."
+
+   
+
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript" src="script/script.js"></script>
+    <script src="script/tooltip.js"></script>
+
+
+    <style type="text/css">
+        #tooltip {
+            background: white;
+            border: 1px solid white;
+            color: #333333;
+            font: menu;
+            margin: 10px;
+            padding: 3px 5px;
+            position: absolute;
+            visibility: hidden
         }
-        /*функция, проводящая непосредственно вычисления */ selectRayon
-        function calculateForm(){
-            var result = (document.getElementById('selectRayon').value * 1)
-            + (document.getElementById('startKapital').value * 1)
-            + (document.getElementById('square').value * 1)
-            + (document.getElementById('srok').value * 1)
-            + parseInt(document.getElementById('postanovka').checked?"500":"0")
-            + parseInt(document.getElementById('podgotovka').checked?"500":"0")
-            + parseInt(document.getElementById('registracia').checked?"1000":"0");
-            changeResult(result);
+    </style>
+    <style>
+        @media (min-width: 320px) and (max-width: 800px) {
+            .map {
+                display: none !important;
             }
-        
-        
-        
-        
-            </script>
 
+            .contacts__form {
+                display: none !important;
+            }
 
-
-<script type="text/javascript" src="script/jquery.min.js"></script>
-<script type="text/javascript" src="script/script.js"></script>
-<script type="text/javascript">$(function() {$('.map').maphilight();});</script>
-<script  src="script/tooltip.js"></script>
-
-
-<style type="text/css">#tooltip{background:white;border:1px solid white;color:#333333;font:menu;margin:10px;padding:3px 5px;position:absolute;visibility:hidden}</style>
-<style>
-    @media (min-width: 320px) and (max-width: 800px) {
-  .map{
-    display:none  !important;
-  }
-  .contacts__form{
-    display:none  !important;
-  }
-  .contacts__text{
-    display:none  !important;
-  }
-  }
-
-</style>
+            .contacts__text {
+                display: none !important;
+            }
+        }
+    </style>
 
 
     <title>Безнес агроном</title>
 </head>
+
 <body class="page">
     <header class="header">
-        <a href="index.html" class="lincks__linck_white"><h2 class="lincks__linck ">БИЗНЕС АГРОНОМ</h2></a>
+        <a href="index.html" class="lincks__linck_white">
+            <h2 class="lincks__linck ">БИЗНЕС АГРОНОМ</h2>
+        </a>
         <nav>
             <ul class="lincks">
                 <li class="lincks__linck"><a href="#"><img src="images/twitter.svg" alt="твиттер"></a></li>
@@ -88,8 +80,9 @@
                             <img src="images/ml.jpg" alt="map" width="300px">
                             <hr>
                             <div class="col">
-                                <p class="alert alert-success" role="alert">Итоговый расчёт: <input type="text" id="result"> </p>
-                
+                                <p class="alert alert-success" role="alert">Итоговый расчёт: 
+                                    <input type="text" placeholder="результаты расчетов" id="resultValue"> </p>
+
                                 <hr>
                                 <p><strong class="font-italic">Дополнительные условия</strong></p>
                                 <div class="alert alert-primary" role="alert">
@@ -107,179 +100,215 @@
                                 <div class="alert alert-primary" role="alert">
                                     Требуется химическая мелиорация
                                 </div>
-                <!--                <input type='checkbox' id="tempCorrection">Необходимость теплиц-->
-                <!--                <input type='checkbox' id="reqPoliv">Коррекция режимов полива-->
-                <!--                <input type='checkbox' id="reqVlazhnostVozduh">Коррекция влажности воздуха-->
-                <!--                <input type='checkbox' id="reqPochvaProfile">Коррекция почвенного профиля-->
-                <!--                <input type='checkbox' id="reqMelioration">Требуется химическая мелиорация-->
-                
+                                <!--                <input type='checkbox' id="tempCorrection">Необходимость теплиц-->
+                                <!--                <input type='checkbox' id="reqPoliv">Коррекция режимов полива-->
+                                <!--                <input type='checkbox' id="reqVlazhnostVozduh">Коррекция влажности воздуха-->
+                                <!--                <input type='checkbox' id="reqPochvaProfile">Коррекция почвенного профиля-->
+                                <!--                <input type='checkbox' id="reqMelioration">Требуется химическая мелиорация-->
+
                             </div>
                         </div>
-                
+
                         <div class="col-8">
                             <h2 class="font-weight-normal">Расчёт прибыльности</h2>
                             <form name="calc" method="post">
-                                <p class="font-italic" >С помощью данного калькулятора Вы можете рассчитать прогноз прибыли возделывания
+                                <p class="font-italic">С помощью данного калькулятора Вы можете рассчитать прогноз
+                                    прибыли возделывания
                                     сельскохозяйственных культур в выбранном регионе.</p>
                                 <div class="dropdown">
-                                    <p class="font-italic" >Выбрать район</p>
+                                    <p class="font-italic">Выбрать район</p>
                                     <select name="selectRayon" id="selectRayon">
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <option class="dropdown-item" value=1000>Йошкар-Ола</option>
-                                            <option class="dropdown-item" value=2000>Юринский р-н</option>
-                                            <option class="dropdown-item" value=3000>Сернурский р-н</option>
-                                            <option class="dropdown-item" value=4000>Волжский р-н</option>
+                                            <option id="selectRayon" class="dropdown-item" value=1000>Йошкар-Ола
+                                            </option>
+                                            <option id="selectRayon" class="dropdown-item" value=2000>Юринский р-н
+                                            </option>
+                                            <option id="selectRayon" class="dropdown-item" value=3000>Сернурский р-н
+                                            </option>
+                                            <option id="selectRayon" class="dropdown-item" value=4000>Волжский р-н
+                                            </option>
                                         </div>
                                 </div>
-                
+
                                 <label for="startKapital">Стартовый капитал</label>
-                                <input type="range" class="custom-range" min="0" max="5" id="startKapital">
+                                <input id="startKapitalist" type="range" class="custom-range" min="100000" max="5000000" step="10000"  >
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Руб.</span>
                                     </div>
-                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <input id="kapital" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                                 </div>
-                
+
                                 <p class="font-italic">Выберите требуемую культуру</p>
                                 <select name="kultura" id="kultura" class="selectKultura">
                                     <!-- <option  disabled="disabled" selected="selected">-- Выберите --</option> -->
-                                    <option selected="selected" value=2000>Картофель</option>
-                                    <option value=2100>Капуста</option>
-                                    <option value=2300>Морковь</option>
-                                    <option value=2500>Свекла</option>
-                                    <option value=3000>Огурец</option>
-                                    <option value=3000>Дыня</option>
-                                    <option value=3000>Арбуз</option>
-                                    <option value=3000>Рис</option>
+                                    <option id="square" selected="selected" value=2000>Картофель</option>
+                                    <option id="square" value=2100>Капуста</option>
+                                    <option id="square" value=2300>Морковь</option>
+                                    <option id="square" value=2500>Свекла</option>
+                                    <option id="square" value=3000>Огурец</option>
+                                    <option id="square" value=3000>Дыня</option>
+                                    <option id="square" value=3000>Арбуз</option>
+                                    <option id="square" value=3000>Рис</option>
                                 </select>
-                <!--                <p>Выберите </p>-->
-                <!--                <select name="b" id="srok" class="selectArea">-->
-                <!--                    &lt;!&ndash; <option  disabled="disabled" selected="selected">&#45;&#45; Выберите &#45;&#45;</option> &ndash;&gt;-->
-                <!--                    <option selected="selected" value=0>30 дней</option>-->
-                <!--                    <option value=500>15 дней</option>-->
-                <!--                    <option value=1500>5 дней</option>-->
-                <!--                    <option value=2500>2 дня</option>-->
-                <!--                </select>-->
+                                <!--                <p>Выберите </p>-->
+                                <!--                <select name="b" id="srok" class="selectArea">-->
+                                <!--                    &lt;!&ndash; <option  disabled="disabled" selected="selected">&#45;&#45; Выберите &#45;&#45;</option> &ndash;&gt;-->
+                                <!--                    <option selected="selected" value=0>30 дней</option>-->
+                                <!--                    <option value=500>15 дней</option>-->
+                                <!--                    <option value=1500>5 дней</option>-->
+                                <!--                    <option value=2500>2 дня</option>-->
+                                <!--                </select>-->
                                 <br>
-                                <input class="btn btn-primary" type="button" value="Рассчитать" onclick="calculateForm()">
+                                <input id="buttonSubmitCalculation" class="btn btn-primary" type="button" value="Рассчитать">
                                 <hr>
                                 <br></br>
-                
-                <!--                <div id="result">Результат</div>-->
+
+                                <!--                <div id="result">Результат</div>-->
                             </form>
-                
+
                         </div>
-                
+
                     </div>
-                </div>  
-
-
-
-
-
-            </div>
-             
-
-
-            
-
-
-
-
-
-
-
-        </section>
-        
-        <section class="features">
-            <h2 class="section-title">Сельское хозяфство это важно</h2>
-            <div class="features__blocks">
-            <article class="features__block">
-                <img class="features__image" src="images/offer-img.svg" alt="договор">
-                <h3 class="features__offer">Надежно</h3>
-                <p class="features__offer-text">Наши вычисления основаны на основании данных о состоянии почвы, местного климата, и особенностей агро культуры </p>
-            </article>
-            <article class="features__block">
-                <img class="features__image" src="images/deadline-img.svg" alt="дедлайн">
-                <h3 class="features__offer">Учтены риски</h3>
-                <p class="features__offer-text">Риски в процессе аграрного производства учтены</p>
-            </article>
-            <article class="features__block">
-                <img class="features__image" src="images/agreement-img.svg" alt="ценник">
-                <h3 class="features__offer">Любые объемы производства</h3>
-                <p class="features__offer-text">Инвестиции ограничены только вашими амбициями</p>
-            </article>
-            <article class="features__block">
-                <img class="features__image" src="images/steps-img.svg" alt="шаги">
-                <h3 class="features__offer">Премежуточные итоги</h3>
-                <p class="features__offer-text">Возможность спланировать этапы производства </p>
-            </article>
-            <article class="features__block">
-                <img class="features__image" src="images/conversation-img.svg" alt="поддержка">
-                <h3 class="features__offer">Информационная поддержка на всех этапах</h3>
-                <p class="features__offer-text">Научим вас или ваших сотрудников эффективно работать, запишем видео-инструкции.</p>
-            </article>
-            </div>
-        </section>
-        
-        
-        <section class="contacts">
-            <h2 class="section-title">Свяжитесь с нами</h2>
-            <article class="contacts__block">
-            <form action="#" class="contacts__form">
-               <p class="contacts__formtext">Можете просто оставить заявку, мы перезвоним вам позже</p>
-               <input type="text" name="fio" placeholder="Ваше имя" class="contacts__input" id="fio">
-               <input type="text" name="phone" placeholder="Ваш телефон" class="contacts__input contacts__input_phone" id="phone">
-               <button class="hero-button hero-button_contacts" >бесплатная консультация</button>
-            </form>
-            <div class="contacts__text">
-                
-                <ul class="contacts__dates">
-                    <li class="contacts__data">
-                       <h3 class="contacts__type">Телефон</h3>
-                       <p class="contacts__value">+7 999 123 45 67</p>
-                    </li>
-                    <li class="contacts__data">
-                        <h3 class="contacts__type">Почта</h3>
-                        <p class="contacts__value">ivanov@mail.ru</p>
-                    </li>
-                </ul>
-                
-
-                <div class="contacts__socials">
-                    <h3 class="contacts__type contacts__type_socials">Соцсети</h3>
-                    <ul class="contacts__social">
-                        <li><a href="#" class="contacts__social-link">t.me/ivanov</a></li>
-                        <li><a href="#" class="contacts__social-link">vk.me/ivanov</a></li>
-                        <li><a href="#" class="contacts__social-link">fb.me/ivanov</a></li>
-                    </ul>
                 </div>
 
 
-                <ul class="lincks lincks_footer">
-                    <li class="lincks__linck"><a href="#"><img src="images/twitter.svg" alt="твиттер"></a></li>
-                    <li class="lincks__linck"><a href="#"><img src="images/instagram.svg" alt="инстаграм"></a></li>
-                    <li class="lincks__linck"><a href="#"><img src="images/facebook.svg" alt="фейсбук"></a></li>
-                </ul>
 
-
-                <a class="contacts__confidential" href="#">Политика конфиденциальности</a>
 
 
             </div>
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+        <section class="features">
+            <h2 class="section-title">Сельское хозяфство это важно</h2>
+            <div class="features__blocks">
+                <article class="features__block">
+                    <img class="features__image" src="images/offer-img.svg" alt="договор">
+                    <h3 class="features__offer">Надежно</h3>
+                    <p class="features__offer-text">Наши вычисления основаны на основании данных о состоянии почвы,
+                        местного климата, и особенностей агро культуры </p>
+                </article>
+                <article class="features__block">
+                    <img class="features__image" src="images/deadline-img.svg" alt="дедлайн">
+                    <h3 class="features__offer">Учтены риски</h3>
+                    <p class="features__offer-text">Риски в процессе аграрного производства учтены</p>
+                </article>
+                <article class="features__block">
+                    <img class="features__image" src="images/agreement-img.svg" alt="ценник">
+                    <h3 class="features__offer">Любые объемы производства</h3>
+                    <p class="features__offer-text">Инвестиции ограничены только вашими амбициями</p>
+                </article>
+                <article class="features__block">
+                    <img class="features__image" src="images/steps-img.svg" alt="шаги">
+                    <h3 class="features__offer">Премежуточные итоги</h3>
+                    <p class="features__offer-text">Возможность спланировать этапы производства </p>
+                </article>
+                <article class="features__block">
+                    <img class="features__image" src="images/conversation-img.svg" alt="поддержка">
+                    <h3 class="features__offer">Информационная поддержка на всех этапах</h3>
+                    <p class="features__offer-text">Научим вас или ваших сотрудников эффективно работать, запишем
+                        видео-инструкции.</p>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="contacts">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <article class="contacts__block">
+                <form action="#" class="contacts__form">
+                    <p class="contacts__formtext">Можете просто оставить заявку, мы перезвоним вам позже</p>
+                    <input type="text" name="fio" placeholder="Ваше имя" class="contacts__input" id="fio">
+                    <input type="text" name="phone" placeholder="Ваш телефон"
+                        class="contacts__input contacts__input_phone" id="phone">
+                    <button class="hero-button hero-button_contacts">бесплатная консультация</button>
+                </form>
+                <div class="contacts__text">
+
+                    <ul class="contacts__dates">
+                        <li class="contacts__data">
+                            <h3 class="contacts__type">Телефон</h3>
+                            <p class="contacts__value">+7 999 123 45 67</p>
+                        </li>
+                        <li class="contacts__data">
+                            <h3 class="contacts__type">Почта</h3>
+                            <p class="contacts__value">ivanov@mail.ru</p>
+                        </li>
+                    </ul>
+
+
+                    <div class="contacts__socials">
+                        <h3 class="contacts__type contacts__type_socials">Соцсети</h3>
+                        <ul class="contacts__social">
+                            <li><a href="#" class="contacts__social-link">t.me/ivanov</a></li>
+                            <li><a href="#" class="contacts__social-link">vk.me/ivanov</a></li>
+                            <li><a href="#" class="contacts__social-link">fb.me/ivanov</a></li>
+                        </ul>
+                    </div>
+
+
+                    <ul class="lincks lincks_footer">
+                        <li class="lincks__linck"><a href="#"><img src="images/twitter.svg" alt="твиттер"></a></li>
+                        <li class="lincks__linck"><a href="#"><img src="images/instagram.svg" alt="инстаграм"></a></li>
+                        <li class="lincks__linck"><a href="#"><img src="images/facebook.svg" alt="фейсбук"></a></li>
+                    </ul>
+
+
+                    <a class="contacts__confidential" href="#">Политика конфиденциальности</a>
+
+
+                </div>
             </article>
         </section>
     </main>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+
+    <script language="JavaScript" type="text/javascript">
+        const rangeKapital = document.getElementById("startKapitalist");
+        const buttonSubmitCalculation = document.getElementById("buttonSubmitCalculation");
+        const resultValue = document.getElementById("resultValue");
+        
+        rangeKapital.addEventListener("change", function () {
+            console.log(this.value);
+            document.getElementById("kapital").placeholder = this.value;
+        });
+
+
+        buttonSubmitCalculation.onclick = (event) => {
+            console.log(document.getElementById("kapital").placeholder);
+            resultValue.placeholder=document.getElementById("kapital").placeholder;
+        }
+
+
+       
+
+
+    </script>
+
+
+
+
+
 </html>
