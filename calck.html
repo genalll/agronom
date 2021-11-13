@@ -80,7 +80,7 @@
                             <img src="images/ml.jpg" alt="map" width="300px">
                             <hr>
                             <div class="col">
-                                <p class="alert alert-success" role="alert">Итоговый расчёт: 
+                                <p class="alert alert-success" role="alert">Итоговый расчёт прибыль в рублях: 
                                     <input type="text" placeholder="результаты расчетов" id="resultValue"> </p>
 
                                 <hr>
@@ -142,14 +142,14 @@
                                 <p class="font-italic">Выберите требуемую культуру</p>
                                 <select name="kultura" id="kultura" class="selectKultura">
                                     <!-- <option  disabled="disabled" selected="selected">-- Выберите --</option> -->
-                                    <option id="square" selected="selected" value=2000>Картофель</option>
-                                    <option id="square" value=2100>Капуста</option>
-                                    <option id="square" value=2300>Морковь</option>
-                                    <option id="square" value=2500>Свекла</option>
-                                    <option id="square" value=3000>Огурец</option>
-                                    <option id="square" value=3000>Дыня</option>
-                                    <option id="square" value=3000>Арбуз</option>
-                                    <option id="square" value=3000>Рис</option>
+                                    <option id="square" selected="selected" value=1.20>Картофель</option>
+                                    <option id="square" value=1.20>Капуста</option>
+                                    <option id="square" value=1.30>Морковь</option>
+                                    <option id="square" value=1.45>Свекла</option>
+                                    <option id="square" value=1.30>Огурец</option>
+                                    <option id="square" value=1.70>Дыня</option>
+                                    <option id="square" value=1.80>Арбуз</option>
+                                    <option id="square" value=1.40>Рис</option>
                                 </select>
                                 <!--                <p>Выберите </p>-->
                                 <!--                <select name="b" id="srok" class="selectArea">-->
@@ -287,6 +287,7 @@
 
     <script language="JavaScript" type="text/javascript">
         const rangeKapital = document.getElementById("startKapitalist");
+        const patatoes = document.getElementById("square");
         const buttonSubmitCalculation = document.getElementById("buttonSubmitCalculation");
         const resultValue = document.getElementById("resultValue");
         
@@ -298,7 +299,7 @@
 
         buttonSubmitCalculation.onclick = (event) => {
             console.log(document.getElementById("kapital").placeholder);
-            resultValue.placeholder=document.getElementById("kapital").placeholder;
+            resultValue.placeholder=document.getElementById("kapital").placeholder * patatoes.value;
         }
 
 
