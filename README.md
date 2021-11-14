@@ -28,6 +28,6 @@
 
 - Денис Беляев front-end  (калькуляция)
 
-- Илья барац аналитика, product manager
+- Илья Барац аналитика, product manager
 
 
