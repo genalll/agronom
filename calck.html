@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="style/index.css">
@@ -13,9 +12,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
+        integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"
+        integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 
     <script type="text/javascript" src="script/jquery.min.js"></script>
     <script type="text/javascript" src="script/script.js"></script>
@@ -77,11 +86,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-4">
-                            <img src="images/ml.jpg" alt="map" width="300px">
+                            <img src="images/ml.png" alt="Респу́блика Мари́й Эл" width="300px">
                             <hr>
                             <div class="col">
-                                <p class="alert alert-success" role="alert">Итоговый расчёт прибыль в рублях: 
-                                    <input type="text" placeholder="результаты расчетов" id="resultValue"> </p>
+                                <p class="alert alert-success" role="alert">Итоговый расчёт прибыль в рублях:
+                                    <input type="text" placeholder="результаты расчетов" id="resultValue">
+                                </p>
 
                                 <hr>
                                 <p><strong class="font-italic">Дополнительные условия</strong></p>
@@ -100,11 +110,6 @@
                                 <div class="alert alert-primary" role="alert">
                                     Требуется химическая мелиорация
                                 </div>
-                                <!--                <input type='checkbox' id="tempCorrection">Необходимость теплиц-->
-                                <!--                <input type='checkbox' id="reqPoliv">Коррекция режимов полива-->
-                                <!--                <input type='checkbox' id="reqVlazhnostVozduh">Коррекция влажности воздуха-->
-                                <!--                <input type='checkbox' id="reqPochvaProfile">Коррекция почвенного профиля-->
-                                <!--                <input type='checkbox' id="reqMelioration">Требуется химическая мелиорация-->
 
                             </div>
                         </div>
@@ -117,7 +122,7 @@
                                     сельскохозяйственных культур в выбранном регионе.</p>
                                 <div class="dropdown">
                                     <p class="font-italic">Выбрать район</p>
-                                    <select name="selectRayon" id="selectRayon">
+                                    <select name="selectRayon" id="selectRayon" class="form-select">
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <option id="selectRayon" class="dropdown-item" value=1000>Йошкар-Ола
                                             </option>
@@ -131,17 +136,18 @@
                                 </div>
 
                                 <label for="startKapital">Стартовый капитал</label>
-                                <input id="startKapitalist" type="range" class="custom-range" min="100000" max="5000000" step="10000"  >
+                                <input id="startKapitalist" type="range" class="custom-range" min="100000" max="5000000"
+                                    step="10000">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Руб.</span>
                                     </div>
-                                    <input id="kapital" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <input id="kapital" type="text" class="form-control"
+                                        aria-label="Amount (to the nearest dollar)">
                                 </div>
 
                                 <p class="font-italic">Выберите требуемую культуру</p>
-                                <select name="kultura" id="kultura" class="selectKultura">
-                                    <!-- <option  disabled="disabled" selected="selected">-- Выберите --</option> -->
+                                <select name="kultura" id="kultura" class="selectKultura form-select">
                                     <option id="square" selected="selected" value=1.20>Картофель</option>
                                     <option id="square" value=1.20>Капуста</option>
                                     <option id="square" value=1.30>Морковь</option>
@@ -151,21 +157,15 @@
                                     <option id="square" value=1.80>Арбуз</option>
                                     <option id="square" value=1.40>Рис</option>
                                 </select>
-                                <!--                <p>Выберите </p>-->
-                                <!--                <select name="b" id="srok" class="selectArea">-->
-                                <!--                    &lt;!&ndash; <option  disabled="disabled" selected="selected">&#45;&#45; Выберите &#45;&#45;</option> &ndash;&gt;-->
-                                <!--                    <option selected="selected" value=0>30 дней</option>-->
-                                <!--                    <option value=500>15 дней</option>-->
-                                <!--                    <option value=1500>5 дней</option>-->
-                                <!--                    <option value=2500>2 дня</option>-->
-                                <!--                </select>-->
+                               
                                 <br>
-                                <input id="buttonSubmitCalculation" class="btn btn-primary" type="button" value="Рассчитать">
+                                <input id="buttonSubmitCalculation" class="btn btn-primary" type="button"
+                                    value="Рассчитать">
                                 <input id="reset" class="btn btn-primary" type="button" value="сброс">
                                 <hr>
                                 <br></br>
 
-                                <!--                <div id="result">Результат</div>-->
+                                
                             </form>
 
                         </div>
@@ -286,31 +286,31 @@
     crossorigin="anonymous"></script>
 
 
-    <script language="JavaScript" type="text/javascript">
-        const rangeKapital = document.getElementById("startKapitalist");
-        const reset = document.getElementById("reset");
-        const patatoes = document.getElementById("square");
-        const buttonSubmitCalculation = document.getElementById("buttonSubmitCalculation");
-        const resultValue = document.getElementById("resultValue");
-        
-        rangeKapital.addEventListener("change", function () {
-            console.log(this.value);
-            document.getElementById("kapital").placeholder = this.value;
-        });
+<script language="JavaScript" type="text/javascript">
+    const rangeKapital = document.getElementById("startKapitalist");
+    const reset = document.getElementById("reset");
+    const patatoes = document.getElementById("square");
+    const buttonSubmitCalculation = document.getElementById("buttonSubmitCalculation");
+    const resultValue = document.getElementById("resultValue");
+
+    rangeKapital.addEventListener("change", function () {
+        console.log(this.value);
+        document.getElementById("kapital").placeholder = this.value;
+    });
 
 
-        buttonSubmitCalculation.onclick = (event) => {
-            console.log(document.getElementById("kapital").placeholder);
-            resultValue.placeholder=document.getElementById("kapital").placeholder * patatoes.value;
-        }
+    buttonSubmitCalculation.onclick = (event) => {
+        console.log(document.getElementById("kapital").placeholder);
+        resultValue.placeholder = document.getElementById("kapital").placeholder * patatoes.value;
+    }
 
-        reset.onclick = function reset(event){
-            document.location.href = "calck.html";
-        }
-       
+    reset.onclick = function reset(event) {
+        document.location.href = "calck.html";
+    }
 
 
-    </script>
+
+</script>
 
 
 
