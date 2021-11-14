@@ -33,7 +33,7 @@
 ## 
 Видео работы приложения:
 
-<video src="video.ogv" controls></video> 
+<video src="https://genalll.github.io/agronom/images/scren.mp4" controls></video> 
 
 ##
 <img src="http://qrcoder.ru/code/?https%3A%2F%2Fgithub.com%2Fgenalll%2Fagronom&10&0" width="370" height="370" border="0" title="QR код">
